@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title> Animacion CS3</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .inicio{
+            height: 50px;
+            width: 100px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contenedor{
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            background-image: url(img/campo.avif);
+            background-size: cover;
+        }
+        .cuadrito{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: -50px;
+            top: 50px;
+
+            animation: cuadrito 10s infinite;
+           
+        }
+        .cuadrito1{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: -50px;
+            top: 50px;
+
+            animation: cuadrito1 12s  infinite;
+           
+        }
+        @keyframes cuadrito {
+            0%{
+                left: -50px;
+                top: 50px;
+                rotate: 0deg;
+            }
+            50%{
+                left: 175px;
+                top: 0px;
+                rotate: 60deg;
+            }
+            100%{
+                left: 400px;
+                top: 50px;
+                rotate: 0px;
+            }
+        }
+         @keyframes cuadrito1 {
+            0%{
+                left: -50px;
+                top: 50px;
+                rotate: 0deg;
+            }
+            50%{
+                left: 175px;
+                top: 150px;
+                rotate: -30deg;
+            }
+            100%{
+                left: 400px;
+                top: 50px;
+                rotate: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="inicio"><a href="../index.html">Patras</a></div>
+    <div class="contenedor">
+        <div class="cuadrito">
+            <img src="img/abeja.png" alt="" width="100">
+        </div>
+        
+        <div class="cuadrito1">
+            <img src="img/abeja1.png" alt="" width="80">
+        </div>
+    </div>
+</body>
+</html>

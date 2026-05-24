@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>CSS ANIMATION - LISA SU</title>
+<style type="text/css">
+
+    .inicio{
+            height: 50px;
+            width: 100px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+*{
+        margin: 10px;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+}
+body{
+        background-color: #1a2a6c;
+        color: #ffffff;
+}
+
+h1#nombre{
+    color: rgba(100, 255, 218, 0);
+    font-size: 45px;
+    letter-spacing: 2px;
+    animation-name: texto_titulo;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+h2{
+    color: rgba(255, 0, 0, 0); 
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation-name: fade_rojo;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+img{
+    opacity: 0;
+    width: 220px;
+    height: auto;
+    border: none; 
+    border-radius: 15px;
+    margin: 20px auto;
+    animation-name: foto;
+    animation-duration: 2s;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+}
+
+p{
+    color: rgba(255, 255, 255, 0);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 15px auto;
+    animation-name: parrafo;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#p1{ animation-delay: 5.5s; }
+#p2{ animation-delay: 8.5s; }
+
+@keyframes foto {
+    from{ opacity: 0; transform: scale(0.9); }
+    to{ opacity: 1; transform: scale(1); }
+}
+
+@keyframes texto_titulo{
+    from{ color: rgba(100, 255, 218, 0); }
+    to{ color: rgba(100, 255, 218, 1); }
+}
+
+@keyframes fade_rojo{
+    from{ color: rgba(255, 0, 0, 0); }
+    to{ color: rgba(255, 0, 0, 1); }
+}
+
+@keyframes parrafo{
+    from{
+        margin-left: 100%;
+        width: 300%;
+        color: rgba(255, 255, 255, 0);
+    }
+    to{
+        margin-left: auto;
+        width: 90%;
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="inicio"><a href="./textos.html">Patras</a></div>
+    
+
+    <h1 id="nombre">DRA. LISA SU</h1>
+    <h2>BIOGRAFÍA</h2>
+    <img src="img/img2.jpg">
+    
+    <p id="p1">Su Lisa (en chino simplificado, 苏姿丰) es una ingeniera eléctrica y ejecutiva comercial estadounidense, nacida en Taiwán. Es la actual directora ejecutiva y presidenta de Advanced Micro Devices (AMD). Al principio de su carrera, trabajó en Texas Instruments, IBM y Freescale Semiconductor en puestos de ingeniería y administración.</p>
+    
+    <p id="p2">Es conocida por su trabajo en el desarrollo de tecnologías de fabricación de semiconductores de silicio sobre aislante y chips semiconductores más eficientes, durante su tiempo como vicepresidenta del Centro de Investigación y Desarrollo de Semiconductores de IBM.</p>
+
+</body>
+</html>
