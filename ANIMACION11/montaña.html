@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EFECTO PARALLAX</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px ;
+        }
+        body{
+            background-color: black;
+        }
+        .contenedor{
+            width: 400px;
+            height: 700px;
+            border: 1px solid white;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+        }
+        .paisaje{
+            width: 800px;
+            position: absolute;
+            left: -150px;
+            z-index: 2;
+            animation: paisaje 20s 1 forwards;
+        }
+        .persona{
+            width: 600px;
+            position: absolute;
+            left: -110px;
+            top: 350px;
+            z-index: 3;
+            animation: persona 15s 1 forwards ;
+        }
+        .cielo{width: 700px;
+            position: absolute;
+            left: -150px;
+            z-index: 1;
+            animation: cielo 25s 1 forwards;
+
+        }
+        .vapor{
+            width: 200%;
+            position: absolute;
+            z-index: 4;
+            top: 450px;
+            animation: vapor 10s 1 forwards;
+
+        }
+        @keyframes vapor{
+            from{
+                left: 0px;
+            }
+            to{
+                left: -200px;
+            }
+
+        }
+
+        @keyframes cielo{
+            from{
+                scale:100%;
+                filter: blur(5px);
+            }
+            to{
+                scale: 150%;
+                filter: blur(1px);
+            }    
+        }
+        @keyframes persona{
+            from{
+                top: 350px;
+                scale:100%;
+                filter: grayscale(100%);
+            }
+            to{
+                top: 290px;
+                scale: 150%;
+                filter: grayscale(0%);
+            }    
+        }
+        @keyframes paisaje{
+            from{
+                top: 0px;
+                filter: blur(2px);
+            }
+            to{
+                top: -50px;
+                filter: blur(0px);
+            }    
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <img class="paisaje" src="IMG/PAISAJE.png" alt="">
+        <img class="persona" src="IMG/PERSONA.png" alt="">
+        <img class="cielo" src="IMG/CIELO.jpg" alt="">
+        <img class="vapor" src="IMG/VAPOR.png" alt="">
+    </div>
+</body>
+</html>
